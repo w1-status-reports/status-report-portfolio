@@ -44,6 +44,9 @@
   .legend-box { display: flex; gap: 18px; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #DDE7E9; }
   .legend-dot { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+  .legend-dot.st-green { background: var(--green); }
+  .legend-dot.st-blue { background: var(--blue); }
+  .legend-dot.st-gray { background: var(--gray); }
   .legend-dot.st-late { background: var(--red); }
 
   .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
@@ -179,7 +182,7 @@
       <div>
         <div class="brand">W1</div>
         <h1>Status Report — Portfolio Management</h1>
-        <div class="subtitle">Spreadsheet data-date: 13/07/2026 &middot; Report generated on July 13, 2026</div>
+        <div class="subtitle">Spreadsheet data-date: 13/07/2026 &middot; Report generated on July 14, 2026</div>
         <div class="hint">Click a progress bar to see the phase-by-phase detail</div>
         <a class="lang-switch" href="Status_Report_Portfolio_PT.html">View in Portuguese →</a>
       </div>
@@ -483,7 +486,7 @@
         <tr>
           <td class="cell-city">
             <div class="city-name">Divinópolis</div>
-            <div class="city-meta">1º in the City (Coworking) &middot; Lucas Guimarães Gontijo &amp; Pedro Baroni Picinin de Castro</div>
+            <div class="city-meta">1º in the City &middot; Lucas Guimarães Gontijo &amp; Pedro Baroni Picinin de Castro</div>
           </td>
           <td class="cell-progress">
             <button class="progress-link" data-modal="modal-p12" type="button" aria-label="Ver detalhes">
@@ -2616,7 +2619,7 @@
     </template>
     <template id="modal-p12">
       <div class="modal-title">Divinópolis</div>
-      <div class="modal-meta">1º in the City (Coworking) &middot; Owner: Lucas Guimarães Gontijo &amp; Pedro Baroni Picinin de Castro</div>
+      <div class="modal-meta">1º in the City &middot; Owner: Lucas Guimarães Gontijo &amp; Pedro Baroni Picinin de Castro</div>
       <div class="modal-topline">
         <div class="modal-progress">
           <div class="bar-track"><div class="bar-fill bar-blue" style="width:51%"></div></div>
