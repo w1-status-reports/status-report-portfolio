@@ -39,8 +39,8 @@
   h1 { margin: 0 0 8px; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
   .subtitle { color: #B9C8CC; font-size: 14px; }
   .hint { color: #9fd8d3; font-size: 12.5px; margin-top: 6px; }
-  .lang-switch { display: inline-block; margin-top: 10px; font-size: 13px; color: #cfe9e7; text-decoration: none; border: 1px solid rgba(255,255,255,0.35); padding: 7px 14px; border-radius: 20px; transition: background 0.15s; }
-  .lang-switch:hover { background: rgba(255,255,255,0.12); }
+  .lang-switch, .btn-print { display: inline-block; margin-top: 10px; margin-right: 10px; font-size: 13px; color: #cfe9e7; text-decoration: none; border: 1px solid rgba(255,255,255,0.35); padding: 7px 14px; border-radius: 20px; transition: background 0.15s; background: none; cursor: pointer; font-family: inherit; }
+  .lang-switch:hover, .btn-print:hover { background: rgba(255,255,255,0.12); }
   .legend-box { display: flex; gap: 18px; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #DDE7E9; }
   .legend-dot { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
@@ -180,7 +180,7 @@
     @page { size: A4 landscape; margin: 10mm; }
     body { font-size: 12px; }
     .wrap { max-width: 100%; padding: 0 6px 20px; }
-    .hint, .lang-switch, .th-progress-hint, .footer-hint { display: none; }
+    .hint, .lang-switch, .th-progress-hint, .footer-hint, .btn-print { display: none; }
     table { min-width: 0; }
     thead th { padding: 6px 8px; font-size: 8.5px; }
     tbody td { padding: 7px 8px; font-size: 9.5px; }
@@ -193,6 +193,7 @@
     tr { break-inside: avoid; page-break-inside: avoid; }
     .hl-card { break-inside: avoid; page-break-inside: avoid; }
     .category { overflow: visible; border-radius: 0; box-shadow: none; }
+    section.category:first-of-type { break-before: page; page-break-before: always; }
     .table-wrap { overflow-x: visible; }
     .kpi-grid-5 { grid-template-columns: repeat(5, 1fr); }
     .hl-grid { grid-template-columns: repeat(2, 1fr); }
@@ -207,6 +208,7 @@
         <h1>Status Report — Portfolio Management</h1>
         <div class="subtitle">Spreadsheet data-date: 13/07/2026 &middot; Report generated on July 14, 2026</div>
         <div class="hint">Click a progress bar to see the phase-by-phase detail</div>
+        <button class="btn-print" type="button" onclick="window.print()">⭳ Export PDF</button>
         <a class="lang-switch" href="Status_Report_Portfolio_PT.html">View in Portuguese →</a>
       </div>
     </div>
